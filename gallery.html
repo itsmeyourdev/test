@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Alexz Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+
+        }
+
+        .contanier {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .portfolio {
+            padding: 20px;
+            margin: 20px;
+
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .portfolio-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 50px;
+        }
+
+        .portfolio-row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: -70px;
+            margin-top: 20px;
+        }
+
+
+        .portfolio-item {
+            text-align: center;
+            margin-bottom: 1px;
+            flex: 0 0 calc(33.33% - 5px);
+  
+        }
+
+        .portfolio-item 
+        img {
+            width: 140px;
+            max-width: 150%;
+            height: auto;
+            border-radius: 50%;
+            border: 7px solid pink;
+            transition: filter 0.3s ease-in;
+            filter: blur(6px); 
+    }
+
+            img:hover {
+             cursor: pointer;
+             filter: blur(0); 
+}
+
+      
+
+
+
+        .soc-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .soc-link a {
+            margin-right: 10px;
+            color: rgb(51, 51, 51);
+            text-decoration: none;
+        }
+
+        .active {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="hero">
+            <nav>
+                <a href="#" class="logo">Alexzandra</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Portfolio</a>
+                    <a class="active" href="gallery.html">Gallery</a>
+                </div>
+            </nav>
+
+            <!-- Gallery Section -->
+            <div class="portfolio">
+                <div class="content">
+                    <h2>My Gallery</h2>
+                    <div class="portfolio-items">
+                        <!-- First Row -->
+                        <div class="portfolio-row">
+                            <!-- Portfolio Item 1 -->
+                            <div class="portfolio-item">
+                                <img src="PIC1.png" alt="Project 1">
+                                <h3>Photo 1</h3>
+                                <p>OCTOBER 7, 2023</p>
+                            </div>
+
+                            <!-- Portfolio Item 2 -->
+                            <div class="portfolio-item">
+                                <img src="PIC2.png" alt="Project 2">
+                                <h3>Photo 2</h3>
+                                <p>JUNE 5, 2022</p>
+                            </div>
+
+                            <!-- Portfolio Item 3 -->
+                            <div class="portfolio-item">
+                                <img src="PIC3.png" alt="Project 3">
+                                <h3>Photo 3</h3>
+                                <p>JULY 15, 2022</p>
+                            </div>
+                        </div>
+
+                        <!-- Second Row -->
+                        <div class="portfolio-row">
+                            <!-- Portfolio Item 4 -->
+                            <div class="portfolio-item">
+                                <img src="PIC4.png" alt="Project 4">
+                                <h3>Photo 4</h3>
+                                <p>JUNE 5, 2021</p>
+                            </div>
+
+                            <!-- Portfolio Item 5 -->
+                            <div class="portfolio-item">
+                                <img src="PIC5.png" alt="Project 5">
+                                <h3>Photo 5</h3>
+                                <p>FEBRUARY 4, 2021.</p>
+                            </div>
+
+                            <!-- Portfolio Item 6 -->
+                            <div class="portfolio-item">
+                                <img src="PIC6.png" alt="Project 6">
+                                <h3>Photo 6</h3>
+                                <p>APRIL 5, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="soc-link">
+                <a href="https://www.facebook.com/ALEXZANDRA.060504"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/Alexzandra23212"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/yoo_mina05/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

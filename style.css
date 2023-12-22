@@ -1,0 +1,418 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.contanier{
+    width: 100%;
+    height: 100vh;
+    background-color: #d5a2e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contanier::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-color: #ff9dcf;
+}
+.contanier .hero{
+    position: relative;
+    z-index: 10;
+    height: 85vh;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 2px solid pink;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgba(191, 102, 209, 0.15);
+    padding: 0 40px 0 80px;
+}
+.hero nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+}
+.hero nav .logo{
+    color: #801f82;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.hero nav .logo:hover{
+    color: #ffffff;
+}
+.hero nav .nav-links a {
+    color: #242424;
+    margin-left: 40px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.hero nav .nav-links a:hover,
+.hero nav .nav-links a.active{
+    color: #821f70;
+}
+.hero .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+.hero .content .div-text{
+    width: 40%;
+}
+.hero .content .div-text h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #fff;
+}
+.hero .content .div-text h4{
+    color: #801f82;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.hero .content .div-text p{
+    color: #636363;
+    margin-bottom: 50px;
+    text-align: justify;
+    font-size: 18px;
+}
+ .content .div-text .btn{
+    padding: 15px 20px;
+    background-color: #801f82;
+    border: 2px solid #801f82;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.hero .content .div-text .btn:hover .div-img{
+    color: #801f82;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+/* Add this section to style the contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+/* End of contact form styling */
+
+
+.soc-link{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.soc-link a i{
+    font-size: 25px;
+    cursor: pointer;
+    color: #801f82;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+.soc-link a i:hover{
+    color: #ff9dcf;
+}
+
+.hero .content .div-img{
+    width: 40%;
+}
+.hero .content .div-img img{
+    width: 100%;
+}
+/* animation */
+
+.hero .logo,
+.hero .content .div-text h1,
+.hero .content .div-text h4,
+.hero .content .div-text .btn{
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+.hero .logo{
+    animation-delay: 0.2s;
+}
+.hero .content .div-text h1 {
+    animation-delay: 0.5s;
+}
+.hero .content .div-text h4
+{
+    animation-delay: 0.9s;
+}
+.hero .content .div-text .btn{
+    animation-delay: 1.8s;
+}
+@keyframes slide-top{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.hero .content .div-text p{
+    position: relative;
+    left: 100px;
+    animation: slide-right .5s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+@keyframes slide-right{
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.hero .content .div-img img .soc-link{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-img .5s linear forwards;
+    animation-delay: 2.1s;
+}
+@keyframes fade-img{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.soc-link {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.soc-link a {
+    text-decoration: none;
+    color: #242424;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.soc-link a i {
+    font-size: 25px;
+    cursor: pointer;
+    color: #801f82;
+    transition: color 0.4s;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+.soc-link a:hover i {
+    color: #ff9dcf;
+}
+
+/* Additional styling for social media links, adjust as needed */
+.soc-link a i.facebook {
+    color: #3b5998; /* Facebook color */
+}
+
+.soc-link a i.twitter {
+    color: #1da1f2; /* Twitter color */
+}
+
+.soc-link a i.instagram {
+    color: #e4405f; /* Instagram color */
+}
+
+
+/* Adjust the size of the login form */
+.login-form {
+    position: relative;
+    z-index: 10;
+    height: 50vh; 
+    width: 50%; 
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 3px solid #ff9dcf;
+    border-radius: 15px; /* Adjust the border radius */
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 15px; 
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+
+.login-form h2,
+.login-form form label,
+.login-form form input,
+.login-form form button {
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+
+.login-form h2 {
+    animation-delay: 0.2s;
+}
+
+.login-form form label {
+    animation-delay: 0.5s;
+}
+
+.login-form form input {
+    animation-delay: 0.9s;
+}
+
+.login-form form button {
+    animation-delay: 1.8s;
+}
+
+@keyframes slide-top {
+    0% {
+        top: 50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+/* Add the animation styles for the portfolio section */
+.portfolio {
+    position: relative;
+    z-index: 10;
+    height: 66vh; /* Adjust the height if needed */
+    width: 95%; /* Stretch the width to 100% */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 15px; /* Adjust the border radius */
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 20px; /* Adjust the padding */
+    margin: 0 auto; /* Center the portfolio section horizontally */
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+
+.portfolio h2,
+.portfolio .portfolio-row,
+.portfolio .portfolio-item {
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+
+.portfolio h2 {
+    animation-delay: 0.2s;
+}
+
+.portfolio .portfolio-row {
+    animation-delay: 0.5s;
+}
+
+.portfolio .portfolio-item {
+    animation-delay: 0.9s;
+}
+
+@keyframes slide-top {
+    0% {
+        top: 50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+.div-img {
+    width: 40%;
+    position: relative;
+}
+
+.div-img img {
+    width: 100%;
+}
+
+.div-img {
+    position: relative;
+    width: 40%;
+    animation: fade-img .5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes fade-img {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
